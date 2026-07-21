@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  font-size: 14px;
+  color: #000000;
+  line-height: 2.4;
+  padding-top: 65px;
+  background-color: #ffffff;
+  font-family: "yu-gothic-pr6n", "Yu Gothic", "YuGothic", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.site-header {
+  width: 100%;
+  height: 45px;
+  padding:30px 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  top: 0;
+  position: fixed;
+}
+
+.logo-img {
+  display: block;
+  width: 100px;
+}
+
+.footer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.copyright {
+  font-size: 14px;
+}
+
+/* ========================
+   ハンバーガーボタンの装飾
+   ======================== */
+.toggle-button-menu {
+  width: 30px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 100; /* メニューより上に表示して押せるようにする */
+  position: relative;
+}
+
+/* 3本線の設定 */
+.toggle-button-menu span {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  right: 0;
+  transition: all 0.3s ease-in-out; /* アニメーションをなめらかにする */
+}
+
+/* 3本線の位置をそれぞれずらす */
+.toggle-button-menu span:nth-child(1) { 
+  top: 0;
+  width: 100%;
+}
+.toggle-button-menu span:nth-child(2) { 
+  top: 11px; /* 縦の中央に配置 */
+  width: 80%; 
+ }
+.toggle-button-menu span:nth-child(3) { 
+  top: 22px; /* 一番下に配置 */
+  width: 60%; 
+ }
+
+/* ========================
+   ナビゲーションメニューの装飾
+   ======================== */
+.site-menu-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* 画面の高さ100% */
+  background-color: #f8f8f8;
+  z-index: 90; /* ヘッダーやボタンの下、メインコンテンツの上に配置 */
+  padding-top: 100px;
+  
+  /* 初期状態は右の画面外に隠しておく */
+  transform: translateX(100%);
+  transition: transform 0.5s; /* スライドのアニメーション */
+}
+
+.site-menu-content ul li a {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 1.2 ease;
+}
+
+.site-menu-content ul li a:hover {
+  background-color: #E5EF23;
+}
+
+.site-menu-content.is-active {
+  transform: translateX(0);
+}
+
+/* ボタンが「✕」に変化するアニメーション */
+.toggle-button-menu.is-active span:nth-child(1) {
+  top: 11px;
+  transform: rotate(45deg);
+}
+.toggle-button-menu.is-active span:nth-child(2) {
+  opacity: 0;
+}
+.toggle-button-menu.is-active span:nth-child(3) {
+  top: 11px;
+  transform: rotate(-45deg);
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding-top: 120px;
+  }
+  .site-header {
+    height: 80px;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  .logo-img {
+    width: 140px;
+    margin-top: 15px;
+  }
+
+  .toggle-button-menu {
+    margin-top: 15px;
+  }
+
+  .footer {
+    margin-top: 100px;
+  }
+}

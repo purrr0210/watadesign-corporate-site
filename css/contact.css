@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+main {
+  background-color: #B4B3B340;
+}
+
+main h2 {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.contact-area {
+  position: relative;
+}
+
+.yellow-circle {
+  display: block;
+  position: absolute;
+  width: 76px;
+  height: 76px;
+  top: 50px;
+  left: 75%;
+  background-color: #E5EF23;
+  border-radius: 50%;
+}
+
+.address {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.address h3 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.address p {
+  line-height: 2;
+}
+
+.address-english {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.address-english h3 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.address-english p {
+  line-height: 2;
+}
+
+.contact-form {
+  width: 80%;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.contact-content {
+  width: 100%;
+}
+
+.contact-content dl {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.input-text,
+.message {
+  width: 100%;
+  border: none;
+  background-color: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.message {
+  height: 160px;
+  resize: vertical;
+}
+
+.submit-button {
+  display: block;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  background-color: #fff;
+  border: none;
+  line-height: 50px;
+  width: 200px;
+  border-radius: 25px;
+  margin: 20px auto;
+  transition: background-color 0.4s ease;
+}
+
+.submit-button:hover {
+  background-color: #E5EF23;
+}
+
+.footer {
+  margin-top: 15px;
+}
