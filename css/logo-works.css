@@ -4,6 +4,15 @@ ul {
   list-style: none;
 }
 
+main h2 {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 .works-title {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; /* 3列を均等な幅にする */
